@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .last{
+            position: absolute;
+            margin-left:-10%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color: #fdd835;">
+    <nav class="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <div class="container">
+            <button class="navbar-toggler" tyoe="button" data-toggle="collapse" data-target="#Navbar">
+                 <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class ="navbar-brand" href="/"> PUBLIC BANK</a>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item "><a class="nav-link" href="/"><strong>Home</strong></a></li>
+                    <li class="nav-item active "><a class="nav-link" href="#"><strong>Customers</strong></a></li>
+                    <li class="nav-item "><a class="nav-link" href="transfermoney"><strong>Transfer Money</strong></a></li>
+                </ul>
+
+            </div>
+            
+        </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <header classs="jumbotron">
+    <div class="container">
+        <h1>CUSTOMERS:</h1>
+        <table class="table table-secondary">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Emailid</th>
+                <th>TotalMoney</th>
+                <th>IdNo:</th>
+            </tr>
+        </thead>
+      
+    <tbody>
+      
+        <% customers.forEach(function(customer){ %>
+          <tr></tr>
+              <% Object.keys(customer).forEach(function(key){%>
+                <td><%= customer[key]%></td>
+           <%}); %>
+        </tr>
+        <% }); %>
+   
+    </tbody>
+    </table>
+        </div>
+    </header>   
+</body>
+</html> 
