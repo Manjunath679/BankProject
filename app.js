@@ -5,7 +5,7 @@ var bodyparser = require('body-parser');
 const path = require('path');
 const  app = express();
 const mongoose = require('mongoose');
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 
 const MongoClient = require('mongodb').MongoClient;
 
